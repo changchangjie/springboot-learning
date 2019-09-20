@@ -16,6 +16,7 @@ public class DemoController {
      */
     @GetMapping(value = "hello")
     public String hello(){
+        System.out.println(111);
         return "hello,docker";
     }
 }

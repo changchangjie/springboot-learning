@@ -17,6 +17,8 @@
 
     <modules>
         <module>docker-demo</module>
+        <module>swagger-demo</module>
+        <module>redis-demo</module>
     </modules>
 
     <!--全局properties配置-->
@@ -38,6 +40,12 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <version>1.5.19.RELEASE</version>
             <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.8.1</version>
         </dependency>
 
     </dependencies>

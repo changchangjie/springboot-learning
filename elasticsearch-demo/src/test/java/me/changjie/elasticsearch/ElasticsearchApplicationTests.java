@@ -2,6 +2,7 @@ package me.changjie.elasticsearch;
 
 import me.changjie.elasticsearch.domain.Book;
 import me.changjie.elasticsearch.repository.BookRepository;
+import org.assertj.core.util.Lists;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -19,6 +21,12 @@ public class ElasticsearchApplicationTests {
 
     @Test
     public void contextLoads() {
+        List<String> list = Lists.newArrayList();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        list = list.stream().filter(s -> "b".equalsIgnoreCase(s)).collect(Collectors.toList());
+        System.out.println(list);
     }
 
 
